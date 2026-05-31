@@ -17,3 +17,47 @@ git clone [https://github.com/hasanmohiuddin99/logtriage.git](https://github.com
 cd logtriage
 go build -o logtriage
 sudo cp logtriage /usr/local/bin/
+
+Alternatively, if you want to use the provided installation script:
+Bash
+
+chmod +x install.sh
+./install.sh
+
+Usage
+
+Once installed, you can call logtriage from any directory on your system.
+1. Scan an Existing Log File
+
+To process an entire static JSON log file from start to finish:
+Bash
+
+logtriage -file /path/to/logs.json
+
+2. Live-Tail an Active Log File
+
+To monitor a log file in real-time as new events are being written (similar to tail -f):
+Bash
+
+logtriage -file /path/to/logs.json -watch
+
+3. Pipe Logs via Stdin
+
+You can pipe the output of any other command or log shipper straight into the utility:
+Bash
+
+cat /path/to/logs.json | logtriage
+
+4. Interactive Mode
+
+Simply run the binary by itself to manually paste or type raw JSON log lines directly into the terminal:
+Bash
+
+logtriage
+
+5. Filter by Minimum Severity
+
+Filter out lower-priority noise by specifying the lowest severity tier you want to display (info, warning, or critical):
+Bash
+
+logtriage -file /path/to/logs.json -min-severity warning
