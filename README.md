@@ -1,5 +1,5 @@
 # logtriage
-![logtriage Banner and Alerts](demo1.jpeg)
+![logtriage Banner and Alerts](demo3.jpeg)
 ![logtriage Banner and Alerts](demo2.jpeg)
 
 A fast, lightweight CLI utility written in Go that transforms raw, nested JSON security logs into clean, human-readable English sentences. It categorizes events by severity and provides immediate operational context for quick triage.
